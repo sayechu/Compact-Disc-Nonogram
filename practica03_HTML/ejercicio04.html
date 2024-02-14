@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <form>
+        <label for="nombre">Nombre: </label>
+        <input type="text">
+
+        <label for="password">Password: </label>
+        <input type="password" minlength="5" maxlength="12">
+
+        <label for="edad">Edad: </label>
+        <input type="number" min="15" max="99">
+
+        <label for="email">Email: </label>
+        <input type="email">
+
+        <label for="curso">Curso: </label>
+        <select name="curso" id="curso">
+            <option value="segundo">2º carrera</option>
+            <option value="tercero">3º carrera</option>
+            <option value="cuarto">4º carrera</option>
+        </select>
+
+        <label for="comentarios">Comentarios: </label>
+        <textarea name="comentarios" id="comentario" cols="30" rows="5">Escribe aquí tu comentario</textarea>
+
+        <p>Color de pelo:</p>
+        <input type="radio" id="rubio" name="pelo" value="Rubio">
+        <label for="rubio">Rubio</label>
+        <input type="radio" id="castaño" name="pelo" value="Castaño">
+        <label for="castaño">Castaño</label>
+        <input type="radio" id="moreno" name="pelo" value="Moreno">
+        <label for="moreno">Moreno</label>
+        <input type="radio" id="pelirojo" name="pelo" value="Pelirojo">
+        <label for="pelirojo">Pelirojo</label>
+        <input type="radio" id="calvo" name="pelo" value="Calvo">
+        <label for="calvo">Calvo</label>
+        <input type="radio" id="otro" name="pelo" value="Otro">
+        <label for="otro">Otro</label>
+        
+    </form>
+</body>
+</html>
