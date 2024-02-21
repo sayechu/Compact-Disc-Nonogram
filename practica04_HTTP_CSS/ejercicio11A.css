@@ -1,0 +1,22 @@
+header{
+    background-color: #5AF4C4;
+    padding: 0;
+} 
+
+ul li{
+    background-color: #0d3c2d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    width: 30%;
+} 
+
+li a{
+    color: white;
+} 
+
+ul li:hover {
+    background-color: #0a2b22;
+}
