@@ -1,6 +1,9 @@
 header{
     background-color: #5AF4C4;
-    padding: 0;
+    /*padding: 0;*/
+    margin: 0;
+    border: 5px #fc0d2b;
+    border-style: hidden hidden solid hidden;
 } 
 
 ul li{
@@ -20,3 +23,48 @@ li a{
 ul li:hover {
     background-color: #0a2b22;
 }
+
+main{
+    background-color:#8da5a0;
+}
+
+section
+{
+    background-color: #d8ebe6;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;;
+    border: 2px;
+    border-style: solid;
+} 
+
+article p{
+    border: 3px#0e7c21; 
+    border-style: hidden hidden dotted hidden;
+    padding-bottom: 2px;
+    padding-left: 25px;
+    padding-right: 20px;
+} 
+
+h3{
+    padding-left: 10px;
+} 
+
+body{
+    border: 5px;
+    border-style: solid;
+    /*margin: 0px;*/
+    display: grid;
+} 
+
+aside{
+    background-color: #51645f;
+    color: white;
+    font-weight: bold;
+} 
+
+footer{
+    background-color: black;
+    text-align: right;
+    color: #b4b4be;
+} 
