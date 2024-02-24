@@ -1,68 +1,94 @@
-header{
-    background-color: #9660e3;
+header {
+    background-color: rgb(150,96,227);
+    padding-bottom: 5px;
+}
+
+header h1 {
     text-align: right;
-    text-decoration: none;
-} 
+    padding-top: 10px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+}
 
-h1,ul{
-    margin-right: 15px;
-} 
-
-ul li{
-    background-color: #d7c0f8;
-    text-decoration: none;
+ul li {
+    background-color: rgb(215,192,248);
     display: inline-block;
     padding: 10px;
-} 
+    text-align: center;
+}
 
-ul li:hover{
-    background-color: #bfa9e0;
-} 
+ul li:hover {
+    background: rgb(203, 176, 241);
+}
 
-li a{
-    color: #9660e3;
-} 
+ul {
+    text-align: right;
+    margin-top: 0px;
+    padding-right: 15px;
+}
 
-body{
-    border: 5px;
-    border-style: solid;
-    display: grid;
-} 
-
-main{
-    background-color: #9188a4;
-    border: 4px;
+main {
+    background-color: rgb(145,136,164);
+    border: 3px;
     border-style: solid;
     float: left;
-    width: 70%;
-} 
+    width: 76.5%
+}
+
+main h2{
+    margin: 0px;
+    padding: 10px;
+}
+
+section {
+    margin: 0px;
+}
 
 section h3{
-    background-color: #a59cbd;
-    text-align: center;
-} 
+    background-color: rgb(165,156,189);
+    margin: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-aside{
-    background-color: #fed2ad;
-    border: 4px;
-    border-style: solid;
-    float: right;
-} 
-
-footer{
-    background-color: #281759;
-    color: #b4b4be;
-    padding-bottom: 50px;
-} 
-
-article p{
-    border: 1px red;
-    border-style: solid;
-    width: 280px;
-    text-align: center;
-} 
-
-article {
+section article {
+    width: 30%;
     display: inline-block;
-    margin: 15px;
-} 
+    margin: 10px;
+}
+
+article p {
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px red;
+    border-style: solid;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(40,23,89);
+    margin-top: 0px;
+    padding-bottom: 70px;
+    color: rgb(185,180,185);
+    clear: both;
+}
+
+aside {
+    background-color: rgb(254,210,173);
+    margin: 0px;
+    float: right;
+    width: 20%;
+    border: 3px;
+    border-style: solid;
+    padding: 10px;
+}
+
+aside p {
+    margin: 0px;
+}
+
+body {
+    border: 5px;
+    border-style: solid;
+}
