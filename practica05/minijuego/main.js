@@ -11,6 +11,7 @@ function crearTablero(){
         for (var j = 0; j < numColumnas; j++){
             // Añadir IF para meter el numero de elementos/bloques que tiene que ir en cada fila
             let celda = document.createElement("td");
+            celda.className = "blank";
             celda.id = i + "" + j;
             celda.onclick = function () {
                 alert(this.id);
