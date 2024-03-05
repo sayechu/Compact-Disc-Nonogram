@@ -6,3 +6,12 @@
 body{
     background-color: beige;
 }
+
+td{
+    width: 30px;
+    height: 30px;
+}
+
+.blank {
+    background-color: white;
+}
