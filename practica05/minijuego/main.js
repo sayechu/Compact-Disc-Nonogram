@@ -36,17 +36,12 @@ function crearTablero(){
 
 function tieneImagen(idCelda) {
     let celdaImagen = document.getElementById(idCelda);
-    
-    if (celdaImagen) {
-        let contenedorDiv = celdaImagen.querySelector('.centered');
+    let contenedorDiv = celdaImagen.querySelector('.centered');
+    let elementoImagen = contenedorDiv.querySelector('img');
 
-        if (contenedorDiv) {
-            let elementoImagen = contenedorDiv.querySelector('img');
-
-            if (elementoImagen) {
-                return true;
-            }
-        }
+    if (elementoImagen) {
+        return true;
     }
+        
     return false;
 }
