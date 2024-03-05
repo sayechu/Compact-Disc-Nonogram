@@ -5,6 +5,9 @@
 
 body{
     background-color: beige;
+    display: grid;
+    place-items: center;
+    height: 100vh;
 }
 
 td{
