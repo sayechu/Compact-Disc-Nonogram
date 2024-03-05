@@ -11,18 +11,22 @@ function crearTablero(){
         for (var j = 0; j < numColumnas; j++){
             // Añadir IF para meter el numero de elementos/bloques que tiene que ir en cada fila
             let celda = document.createElement("td");
+
+            let divToCenter = document.createElement("div");
+            divToCenter.className = "centered";
+
             celda.className = "blank";
             celda.id = i + "_" + j;
             celda.onclick = function () {
                 //alert(this.id);
-                celdaImagen = document.getElementById(this.id);
                 imagen = document.createElement("img");
                 imagen.src = "./compactDisc.png";
                 imagen.width = "26";
                 imagen.height = "26";
-                celdaImagen.appendChild(imagen);
-            }
 
+                divToCenter.appendChild(imagen);
+            }
+            celda.appendChild(divToCenter);
             fila.appendChild(celda);
         }
         tabla.appendChild(fila);
