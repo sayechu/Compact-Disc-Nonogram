@@ -18,8 +18,8 @@ function crearTablero(){
                 celdaImagen = document.getElementById(this.id);
                 imagen = document.createElement("img");
                 imagen.src = "./compactDisc.png";
-                imagen.width = "29";
-                imagen.height = "29";
+                imagen.width = "26";
+                imagen.height = "26";
                 celdaImagen.appendChild(imagen);
             }
 
