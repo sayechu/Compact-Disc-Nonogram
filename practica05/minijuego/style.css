@@ -1,20 +1,27 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     background-color: beige;
     display: grid;
     place-items: center;
     height: 100vh;
 }
 
-td{
+td {
     width: 30px;
     height: 30px;
+    border: 1px solid rgb(161, 145, 145);
 }
 
 .blank {
     background-color: white;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
