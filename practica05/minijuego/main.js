@@ -12,9 +12,15 @@ function crearTablero(){
             // Añadir IF para meter el numero de elementos/bloques que tiene que ir en cada fila
             let celda = document.createElement("td");
             celda.className = "blank";
-            celda.id = i + "" + j;
+            celda.id = i + "_" + j;
             celda.onclick = function () {
-                alert(this.id);
+                //alert(this.id);
+                celdaImagen = document.getElementById(this.id);
+                imagen = document.createElement("img");
+                imagen.src = "./compactDisc.png";
+                imagen.width = "29";
+                imagen.height = "29";
+                celdaImagen.appendChild(imagen);
             }
 
             fila.appendChild(celda);
