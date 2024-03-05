@@ -18,13 +18,13 @@ function crearTablero(){
             celda.className = "blank";
             celda.id = i + "_" + j;
             celda.onclick = function () {
-                //alert(this.id);
-                imagen = document.createElement("img");
-                imagen.src = "./compactDisc.png";
-                imagen.width = "26";
-                imagen.height = "26";
-
-                divToCenter.appendChild(imagen);
+                if (!tieneImagen(this.id)) {
+                    imagen = document.createElement("img");
+                    imagen.src = "./compactDisc.png";
+                    imagen.width = "26";
+                    imagen.height = "26";
+                    divToCenter.appendChild(imagen);
+                }
             }
             celda.appendChild(divToCenter);
             fila.appendChild(celda);
@@ -32,4 +32,21 @@ function crearTablero(){
         tabla.appendChild(fila);
     }
     document.body.appendChild(tabla);
+}
+
+function tieneImagen(idCelda) {
+    let celdaImagen = document.getElementById(idCelda);
+    
+    if (celdaImagen) {
+        let contenedorDiv = celdaImagen.querySelector('.centered');
+
+        if (contenedorDiv) {
+            let elementoImagen = contenedorDiv.querySelector('img');
+
+            if (elementoImagen) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
