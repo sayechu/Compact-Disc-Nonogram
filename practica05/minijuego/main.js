@@ -6,9 +6,9 @@ crearTablero();
 function crearTablero(){
     let tabla = document.createElement("table");
 
-    for (var i = 0; i < numFilas; i++){
+    for (var i = 0; i <= numFilas; i++){
         let fila = document.createElement("tr");
-        for (var j = 0; j < numColumnas; j++){
+        for (var j = 0; j <= numColumnas; j++){
             // Añadir IF para meter el numero de elementos/bloques que tiene que ir en cada fila
             let celda = document.createElement("td");
 
