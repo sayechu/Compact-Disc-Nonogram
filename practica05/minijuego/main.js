@@ -9,21 +9,23 @@ function crearTablero(){
     for (var i = 0; i <= numFilas; i++){
         let fila = document.createElement("tr");
         for (var j = 0; j <= numColumnas; j++){
-            // Añadir IF para meter el numero de elementos/bloques que tiene que ir en cada fila
             let celda = document.createElement("td");
-
             let divToCenter = document.createElement("div");
             divToCenter.className = "centered";
-
-            celda.className = "blank";
-            celda.id = i + "_" + j;
-            celda.onclick = function () {
-                if (!tieneImagen(this.id)) {
-                    imagen = document.createElement("img");
-                    imagen.src = "./compactDisc.png";
-                    imagen.width = "26";
-                    imagen.height = "26";
-                    divToCenter.appendChild(imagen);
+            if (i == 0 || j == 0) {
+                celda.className = "numbered";
+                celda.id = i + "_" + j;
+            } else {
+                celda.className = "blank";
+                celda.id = i + "_" + j;
+                celda.onclick = function () {
+                    if (!tieneImagen(this.id)) {
+                        imagen = document.createElement("img");
+                        imagen.src = "./compactDisc.png";
+                        imagen.width = "26";
+                        imagen.height = "26";
+                        divToCenter.appendChild(imagen);
+                    }
                 }
             }
             celda.appendChild(divToCenter);
