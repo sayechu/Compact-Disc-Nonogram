@@ -10,6 +10,10 @@ body {
     height: 100vh;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 td {
     width: 30px;
     height: 30px;
