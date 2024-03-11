@@ -28,4 +28,9 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.numbered {
+    border-width: 0;
 }
