@@ -17,7 +17,9 @@ play();
 
 function play() {
     crearTablero();
+    crearContenedor();
     actualizarVidas(vidas);
+    mostrarSelector();
 }
 
 function crearTablero(){
@@ -67,6 +69,8 @@ function tieneImagen(idCelda) {
 }
 
 function actualizarVidas(numVidas) {
+    let container = document.getElementById("container");
+
     let divVidas = document.createElement("div");
     divVidas.id = "vidas";
     for (var i = 0; i < numVidas; i++) {
@@ -87,5 +91,32 @@ function actualizarVidas(numVidas) {
             divVidas.appendChild(imagenVidaVacia);
         }
     }
-    document.body.appendChild(divVidas);
+    container.appendChild(divVidas);
+}
+function crearContenedor() {
+    let container = document.createElement("div");
+    container.id = "container";
+
+    document.body.appendChild(container);
+}
+
+function mostrarSelector() {
+    let container = document.getElementById("container");
+
+    let divSelector = document.createElement("div");
+    divSelector.id = "selector";
+
+    let imagenX = document.createElement("img");
+    imagenX.src = "./img/X.png";
+    imagenX.width = "23";
+    imagenX.height = "23";
+    divSelector.appendChild(imagenX);
+
+    let imagenDisc = document.createElement("img");
+    imagenDisc.src = "./img/compactDisc.png";
+    imagenDisc.width = "26";
+    imagenDisc.height = "26";
+    divSelector.appendChild(imagenDisc);
+
+    container.appendChild(divSelector);
 }
