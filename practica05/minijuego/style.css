@@ -58,3 +58,19 @@ h2 {
 #vidas {
     margin-left: 50px;
 }
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selector {
+    margin-top: 20px;
+    margin-left: 50px;
+    display: flex;
+}
+
+#selector img {
+    margin-right: 15px;
+}
