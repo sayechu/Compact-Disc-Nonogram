@@ -1,6 +1,19 @@
 let numFilas = 10;
 let numColumnas = 10;
 
+let flag = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+           [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+           [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]];
+
+let vidas = 3;
+
 crearTablero();
 
 function crearTablero(){
@@ -12,6 +25,7 @@ function crearTablero(){
             let celda = document.createElement("td");
             let divToCenter = document.createElement("div");
             divToCenter.className = "centered";
+            divToCenter.id = i + "" + j;
             if (i == 0 || j == 0) {
                 celda.className = "numbered";
                 celda.id = i + "_" + j;
