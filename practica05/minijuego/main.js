@@ -39,13 +39,7 @@ function crearTablero(){
                 celda.className = "blank";
                 celda.id = i + "_" + j;
                 celda.onclick = function () {
-                    if (!tieneImagen(this.id)) {
-                        imagen = document.createElement("img");
-                        imagen.src = "./img/compactDisc.png";
-                        imagen.width = "26";
-                        imagen.height = "26";
-                        divToCenter.appendChild(imagen);
-                    }
+                    logicaPrograma(divToCenter, this.id);
                 }
             }
             celda.appendChild(divToCenter);
@@ -56,6 +50,24 @@ function crearTablero(){
     document.body.appendChild(tabla);
 }
 
+function logicaPrograma(divToCenter, idCelda) {
+    if (!tieneImagen(idCelda)) {  
+        if (disk) {
+            imagen = document.createElement("img");
+            imagen.src = "./img/compactDisc.png";
+            imagen.width = "26";
+            imagen.height = "26";
+            divToCenter.appendChild(imagen);
+        } else {
+            imagen = document.createElement("img");
+            imagen.src = "./img/X.png";
+            imagen.width = "20";
+            imagen.height = "20";
+            divToCenter.appendChild(imagen);
+        }
+    }
+}
+
 function tieneImagen(idCelda) {
     let celdaImagen = document.getElementById(idCelda);
     let contenedorDiv = celdaImagen.querySelector(".centered");
@@ -64,7 +76,6 @@ function tieneImagen(idCelda) {
     if (elementoImagen) {
         return true;
     }
-        
     return false;
 }
 
@@ -106,16 +117,20 @@ function mostrarSelector() {
     let divSelector = document.createElement("div");
     divSelector.id = "selector";
 
-    let imagenX = document.createElement("img");
-    imagenX.src = "./img/X.png";
-    imagenX.width = "23";
-    imagenX.height = "23";
-    divSelector.appendChild(imagenX);
-
     let imagenDisc = document.createElement("img");
     imagenDisc.src = "./img/compactDisc.png";
     imagenDisc.width = "26";
     imagenDisc.height = "26";
+    imagenDisc.id = "imga";
+    imagenDisc.onclick = function () {
+        if (imagenDisc.src.endsWith("/img/X.png")) {
+            imagenDisc.src = "./img/compactDisc.png";
+            disk = true;
+        } else {
+            imagenDisc.src = "./img/X.png";
+            disk = false;
+        }
+    }
     divSelector.appendChild(imagenDisc);
 
     container.appendChild(divSelector);
