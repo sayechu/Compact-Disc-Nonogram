@@ -5,13 +5,17 @@
 
 body {
     background-color: beige;
-    display: grid;
-    place-items: center;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
 table {
     border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 td {
@@ -33,4 +37,20 @@ td {
 
 .numbered {
     border-width: 0;
+}
+
+#header {
+    margin: 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    text-align: right;
+    margin-top: 5px;
 }
