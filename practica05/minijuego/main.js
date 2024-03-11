@@ -16,9 +16,10 @@ let disk = true;
 play();
 
 function play() {
+    let vidas = 3;
     crearTablero();
     crearContenedor();
-    actualizarVidas(vidas);
+    mostrarVidas(vidas);
     mostrarSelector();
 }
 
@@ -52,18 +53,21 @@ function crearTablero(){
 
 function logicaPrograma(divToCenter, idCelda) {
     if (!tieneImagen(idCelda)) {  
-        if (disk) {
+        pos = idCelda.split("_");
+        if ((flag[pos[0]-1][pos[1]-1] == 1) && disk) {
             imagen = document.createElement("img");
             imagen.src = "./img/compactDisc.png";
             imagen.width = "26";
             imagen.height = "26";
             divToCenter.appendChild(imagen);
-        } else {
+        } else if ((flag[pos[0]-1][pos[1]-1] == 0) && !disk) {
             imagen = document.createElement("img");
             imagen.src = "./img/X.png";
             imagen.width = "20";
             imagen.height = "20";
             divToCenter.appendChild(imagen);
+        } else {
+            eliminarVida();
         }
     }
 }
@@ -79,7 +83,7 @@ function tieneImagen(idCelda) {
     return false;
 }
 
-function actualizarVidas(numVidas) {
+function mostrarVidas(numVidas) {
     let container = document.getElementById("container");
 
     let divVidas = document.createElement("div");
@@ -104,6 +108,16 @@ function actualizarVidas(numVidas) {
     }
     container.appendChild(divVidas);
 }
+
+function eliminarVida(){
+    imagen = document.getElementById(vidas-1);
+    imagen.src = "./img/emptyHeart.png";
+    vidas--;
+    if (vidas === 0) {
+        alert("Game Over!");
+    }
+}
+
 function crearContenedor() {
     let container = document.createElement("div");
     container.id = "container";
