@@ -15,6 +15,7 @@ let flag = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 let vidas = 3;
 
 crearTablero();
+actualizarVidas(3);
 
 function crearTablero(){
     let tabla = document.createElement("table");
@@ -35,7 +36,7 @@ function crearTablero(){
                 celda.onclick = function () {
                     if (!tieneImagen(this.id)) {
                         imagen = document.createElement("img");
-                        imagen.src = "./compactDisc.png";
+                        imagen.src = "./img/compactDisc.png";
                         imagen.width = "26";
                         imagen.height = "26";
                         divToCenter.appendChild(imagen);
@@ -52,12 +53,36 @@ function crearTablero(){
 
 function tieneImagen(idCelda) {
     let celdaImagen = document.getElementById(idCelda);
-    let contenedorDiv = celdaImagen.querySelector('.centered');
-    let elementoImagen = contenedorDiv.querySelector('img');
+    let contenedorDiv = celdaImagen.querySelector(".centered");
+    let elementoImagen = contenedorDiv.querySelector("img");
 
     if (elementoImagen) {
         return true;
     }
         
     return false;
+}
+
+function actualizarVidas(numVidas) {
+    let divVidas = document.createElement("div");
+    divVidas.id = "vidas";
+    for (var i = 0; i < numVidas; i++) {
+        let imagenVida = document.createElement("img");
+        imagenVida.src = "./img/heartSolid.svg";
+        imagenVida.id = i;
+        imagenVida.width = "30";
+        imagenVida.height = "30";
+        divVidas.appendChild(imagenVida);
+    }
+    if (numVidas != 3) {
+        for (var i = numVidas; i < 3; i++) {
+            let imagenVidaVacia = document.createElement("img");
+            imagenVidaVacia.src = "./img/emptyHeart.png";
+            imagenVidaVacia.id = i;
+            imagenVidaVacia.width = "30";
+            imagenVidaVacia.height = "30";
+            divVidas.appendChild(imagenVidaVacia);
+        }
+    }
+    document.body.appendChild(divVidas);
 }
