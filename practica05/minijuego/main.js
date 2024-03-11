@@ -1,6 +1,3 @@
-let numFilas = 10;
-let numColumnas = 10;
-
 let flag = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -11,11 +8,17 @@ let flag = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]];
-
+let numFilas = 10;
+let numColumnas = 10;
 let vidas = 3;
+let disk = true;
 
-crearTablero();
-actualizarVidas(3);
+play();
+
+function play() {
+    crearTablero();
+    actualizarVidas(vidas);
+}
 
 function crearTablero(){
     let tabla = document.createElement("table");
