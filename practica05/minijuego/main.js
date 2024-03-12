@@ -12,6 +12,7 @@ let numFilas = 10;
 let numColumnas = 10;
 let vidas = 3;
 let disk = true;
+let contadorFinal = 0;
 
 play();
 
@@ -61,6 +62,7 @@ function logicaPrograma(divToCenter, idCelda) {
             imagen.width = "26";
             imagen.height = "26";
             divToCenter.appendChild(imagen);
+            contadorFinal++;
         } else if ((flag[pos[0]-1][pos[1]-1] == 0) && !disk) {
             imagen = document.createElement("img");
             imagen.src = "./img/X.png";
@@ -70,6 +72,9 @@ function logicaPrograma(divToCenter, idCelda) {
         } else {
             eliminarVida();
         }
+    }
+    if (contadorFinal == 64) {
+        reemplazarTabla();
     }
 }
 
@@ -188,4 +193,16 @@ function getColumn(matrix, columnIndex) {
         column.push(matrix[i][columnIndex]);
     }
     return column;
+}
+
+function reemplazarTabla() {
+    let table = document.querySelector('table');
+    table.parentNode.removeChild(table);
+
+    let image = document.createElement('img');
+    image.src = './img/argentina.png';
+    image.width = 10 * 20;
+    image.height = 10 * 20;
+
+    document.body.appendChild(image);
 }

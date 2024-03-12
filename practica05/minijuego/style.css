@@ -37,6 +37,8 @@ td {
 
 .numbered {
     border-width: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 #header {
