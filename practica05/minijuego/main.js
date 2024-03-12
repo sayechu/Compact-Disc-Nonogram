@@ -149,3 +149,22 @@ function mostrarSelector() {
 
     container.appendChild(divSelector);
 }
+
+function calcularIndiceFilaNonograma(row) {
+    let counter = 0;
+    let sol = "";
+    
+    for (var i = 0; i < row.length; i++) {
+        if (row[i] === 1) {
+            counter += 1;
+        } else if (counter > 0) {
+            sol = sol.concat(counter.toString());
+            counter = 0;
+        }
+    }
+
+    if (counter > 0) {
+        sol = sol.concat(counter.toString());
+    }
+    return sol;
+}
