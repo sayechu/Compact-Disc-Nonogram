@@ -18,6 +18,7 @@ play();
 function play() {
     let vidas = 3;
     crearTablero();
+    mostrarIndices(flag.length);
     crearContenedor();
     mostrarVidas(vidas);
     mostrarSelector();
@@ -159,6 +160,7 @@ function calcularIndiceFilaNonograma(row) {
             counter += 1;
         } else if (counter > 0) {
             sol = sol.concat(counter.toString());
+            sol = sol.concat("\n");
             counter = 0;
         }
     }
@@ -167,4 +169,23 @@ function calcularIndiceFilaNonograma(row) {
         sol = sol.concat(counter.toString());
     }
     return sol;
+}
+
+function mostrarIndices(length) {
+    for (var i = 0; i < length; i++) {
+        let cellRowToPutIndice = document.getElementById((i + 1) + "_0");
+        let cellColumnToPutIndice = document.getElementById("0_" + (i + 1));
+        res1 = calcularIndiceFilaNonograma(flag[i]);
+        res2 = calcularIndiceFilaNonograma(getColumn(flag, i));
+        cellRowToPutIndice.innerText = res1;
+        cellColumnToPutIndice.innerText = res2;
+    }
+}
+
+function getColumn(matrix, columnIndex) {
+    let column = [];
+    for (var i = 0; i < matrix.length; i++) {
+        column.push(matrix[i][columnIndex]);
+    }
+    return column;
 }
