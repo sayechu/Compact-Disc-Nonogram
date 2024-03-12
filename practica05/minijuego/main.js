@@ -197,12 +197,17 @@ function getColumn(matrix, columnIndex) {
 
 function reemplazarTabla() {
     let table = document.querySelector('table');
-    table.parentNode.removeChild(table);
+    let tableRect = table.getBoundingClientRect();
 
     let image = document.createElement('img');
     image.src = './img/argentina.png';
-    image.width = 10 * 20;
-    image.height = 10 * 20;
+    image.width = tableRect.width;
+    image.height = tableRect.height;
+    
+    image.style.position = 'absolute';
+    image.style.top = tableRect.top + 'px';
+    image.style.left = tableRect.left + 'px';
+    image.style.zIndex = '-1';
 
     document.body.appendChild(image);
 }
