@@ -203,11 +203,11 @@ function reemplazarTabla() {
     image.src = './img/argentina.png';
     image.width = tableRect.width;
     image.height = tableRect.height;
-    
+
     image.style.position = 'absolute';
     image.style.top = tableRect.top + 'px';
     image.style.left = tableRect.left + 'px';
-    image.style.zIndex = '-1';
+    image.style.zIndex = '999';
 
     document.body.appendChild(image);
 }
