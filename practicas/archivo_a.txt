@@ -1,4 +1,0 @@
-
-añadiendo contenido a fichero a
-nuevo contenido fichero a
-nueva linea fichero archivo_a.txt desde rama rama_practica02
